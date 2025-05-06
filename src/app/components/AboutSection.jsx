@@ -53,13 +53,12 @@ const AboutSection = () => {
         <Image src="/images/about-imagen.png" width={1000} height={1000} alt="Imagen sobre mí"/>
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>Sobre Mí</h2>
-          <p className='text-base lg:text-lg'>
-           Ingeniero en Informática egresado del Instituto Profesional INACAP. 
+          <p className='text-base lg:text-lg text-justify'>
            Me destaco por mi capacidad de adaptación, trabajo en equipo, comunicación 
            efectiva y actitud colaborativa en entornos sociales y profesionales. 
            Disfruto generar un ambiente positivo, lo que me permite integrarme 
            fácilmente a nuevos equipos y construir buenas relaciones laborales. </p>
-          <div className='flex flex-row justify-start mt-8'>
+          <div className='flex flex-row justify-start mt-2'>
             <TabButton 
               selectTab={() => handleTabChange("skills")}
               active={tab=="skills"} className="w-full h-auto object-cover"
