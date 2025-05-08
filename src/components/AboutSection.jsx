@@ -1,7 +1,7 @@
 "use client";
 import React,{useTransition, useState} from 'react'
 import Image from 'next/image'
-import TabButton from './TabButton';
+import {TabButton} from './TabButton';
 
 const TAB_DATA=[
   {
@@ -9,12 +9,12 @@ const TAB_DATA=[
     id:"skills",
     content : (
       <ul>
-        <li>Excel</li>
-        <li>Python(flask and django)</li>
-        <li>MySQL</li>
-        <li>Next.js</li>
-        <li>Soporte TI</li>
-        <li>Instalacion de Sistemas</li>
+        <li>• Excel</li>
+        <li>• Python(flask and django)</li>
+        <li>• MySQL</li>
+        <li>• Next.js</li>
+        <li>• Soporte TI</li>
+        <li>• Instalacion de Sistemas</li>
       </ul>
     )
   },
@@ -23,7 +23,7 @@ const TAB_DATA=[
     id:"education",
     content : (
       <ul>
-        <li>Instituto Profesional Inacap</li>
+        <li>• Instituto Profesional Inacap</li>
       </ul>
     )
   },
@@ -32,13 +32,13 @@ const TAB_DATA=[
     id:"certifications",
     content : (
       <ul>
-        <li>Soporte y redes, Cisco</li>
+        <li>• Soporte y redes, Cisco</li>
       </ul>
     )
   }
 ]
 
-const AboutSection = () => {
+export const AboutSection = () => {
   const [tab, setTab] =useState("skills");
   const [  isPending, startTransition] = useTransition();
 
@@ -48,17 +48,14 @@ const AboutSection = () => {
     } );
   };
   return (
-    <section id="about" className='text-white mt-8'>      
-      <div className='md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+    <section id="about" className='text-white'>      
+      <div className='md:grid md:grid-cols-2 gap-8 items-start mt-15 py-50 px-4 xl:gap-16 sm:py-16 xl:px-16'>
         <Image src="/images/about-imagen.png" width={1000} height={1000} alt="Imagen sobre mí"/>
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
           <h2 className='text-4xl font-bold text-white mb-4'>Sobre Mí</h2>
           <p className='text-base lg:text-lg text-justify'>
-           Me destaco por mi capacidad de adaptación, trabajo en equipo, comunicación 
-           efectiva y actitud colaborativa en entornos sociales y profesionales. 
-           Disfruto generar un ambiente positivo, lo que me permite integrarme 
-           fácilmente a nuevos equipos y construir buenas relaciones laborales. </p>
-          <div className='flex flex-row justify-start mt-2'>
+          Soy una persona tranquila, constante y activa físicamente. Me gusta entrenar en el gimnasio, jugar fútbol, hacer trekking y también disfrutar de los videojuegos en mi tiempo libre. Valoro cuando las cosas salen bien, pero si no, no me rindo: lo intento hasta que lo logro. Me gusta aprender, superarme y ver resultados, tanto en lo personal como en lo profesional. En la programación encontré una forma de combinar mi lado lógico con mi determinación, y cada proyecto es una nueva oportunidad para seguir creciendo. </p>
+          <div className='flex flex-row justify-center mt-2'>
             <TabButton 
               selectTab={() => handleTabChange("skills")}
               active={tab=="skills"} className="w-full h-auto object-cover"
@@ -88,4 +85,3 @@ const AboutSection = () => {
   )
 }
 
-export default AboutSection

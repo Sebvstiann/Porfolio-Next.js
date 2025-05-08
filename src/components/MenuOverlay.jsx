@@ -1,9 +1,9 @@
 import React from 'react'
-import NavLink from "./NavLink";
+import {NavLink} from "./NavLink";
 
 {/*opciones dentro del menu para movil */}
 
-const MenuOverlay = ({links}) => {
+export const MenuOverlay = ({links}) => {
   return (
     <ul className='flex flex-col py-4 items-center'>
         {links.map((link, index) => (
@@ -16,4 +16,3 @@ const MenuOverlay = ({links}) => {
   );
 };
 
-export default MenuOverlay

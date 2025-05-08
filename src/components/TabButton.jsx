@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TabButton = ({ active, selectTab, children}) => {
+export const TabButton = ({ active, selectTab, children}) => {
     const buttonClasses = active 
         ? 'text-white border-b border-amber-500'
         : 'text-[#ADB7BE]';
@@ -14,4 +14,3 @@ const TabButton = ({ active, selectTab, children}) => {
   )
 }
 
-export default TabButton;
