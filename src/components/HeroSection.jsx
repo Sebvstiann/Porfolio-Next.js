@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 export const HeroSection = () => {
   return (
-    <section className='mt-30'>
+    <section className='mt-20'>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-7 place-self-center text-center sm:text-left' >
           <h1 className='text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold'>
@@ -39,9 +39,7 @@ export const HeroSection = () => {
             Botones con tamaños de x de 6 px e y de 3px, Este boton es transparente con bordes blanco y texto blanco
             <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-transparent  hover:bg-slate-500 text-white border border-white mt-3'>Download CV</button>*/}
           
-          <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 text-white hover:scale-105 hover:rotate-1'>
-            <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2 animate'>Contratame</span>
-          </button>
+          
           <a
             href="/cv_sebastian.pdf"
             download

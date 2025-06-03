@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from "./NavLink";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { MenuOverlay } from "./MenuOverlay";
+import SpotifyEmbed from './SpotifyEmbed';
 
 
 const Navlinks = [
   { title: "Inicio", path: "/" },
-  { title: "Sobre Mí", path: "/about" },
+  { title: "Sobre mí", path: "/about" },
   { title: "Proyectos", path: "/projects" },
-  { title: "Contacto", path: "/camara" }
+  { title: "Contacto", path: "/contact" }
 ];
 
 export const Navbar = () => {
@@ -29,11 +30,15 @@ export const Navbar = () => {
 
   return (
     <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] opacity-90'>
-      <div className='max-w-7xl mx-auto px-4 py-7 flex items-center justify-between'>
+      <div className='max-w-8xl mx-auto px-2 py-1 flex items-center justify-between'>
+        <nav className="flex items-center justify-between  text-white p-1">
+          <div className="text-xl font-bold"></div>
+            <SpotifyEmbed />
+           </nav>
 
         {/* Links para escritorio */}
-        <div className="hidden md:flex md:justify-center md:items-center flex-1">
-          <ul className="flex space-x-8">
+        <div className="hidden md:flex md:justify-end flex-1 pr-8">
+          <ul className="flex space-x-12">
             {Navlinks.map((link, index) => (
               <li key={index}>
                 <NavLink href={link.path} title={link.title} />

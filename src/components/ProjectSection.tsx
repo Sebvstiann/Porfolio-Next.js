@@ -1,5 +1,7 @@
+"use client"
 import React from 'react'
 import {ProjectCard}from './ProjectCard';
+import { TypeAnimation } from 'react-type-animation';
 
 const projectsData=[
     {
@@ -32,9 +34,19 @@ const projectsData=[
 export const ProjectSection = () => {
   return (
     <section id="proyectos">
-    <h2 className='text-center text-4xl font-bold text-white mt-30 mb-8 md:mb-12'>
-        Mis Proyectos
-        </h2>
+    <p className='text-center text-4xl font-bold text-white mt-10 mb-8 md:mb-12'>
+        <TypeAnimation
+                      sequence={[
+                        'Mis Proyectos',
+                        1000,
+                        
+                      ]}
+                      wrapper="span"
+                      speed={20}
+                      repeat={Infinity}
+                    
+                    />
+        </p>
     <div className='grid md:grid-cols-2 gap-8 md-gap-12'>
         {projectsData.map((project) => 
         <ProjectCard 

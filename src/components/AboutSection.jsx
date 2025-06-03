@@ -2,6 +2,7 @@
 import React,{useTransition, useState} from 'react'
 import Image from 'next/image'
 import {TabButton} from './TabButton';
+import { TypeAnimation } from 'react-type-animation';
 
 const TAB_DATA=[
   {
@@ -49,10 +50,21 @@ export const AboutSection = () => {
   };
   return (
     <section id="about" className='text-white'>      
-      <div className='md:grid md:grid-cols-2 gap-8 items-start mt-15 py-50 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+      <div className='md:grid md:grid-cols-2 gap-8 items-start mt-15 py-20 px-4 xl:gap-16 sm:py-16 xl:px-16'>
         <Image src="/images/about-imagen.png" width={1000} height={1000} alt="Imagen sobre mí"/>
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
-          <h2 className='text-4xl font-bold text-white mb-4'>Sobre Mí</h2>
+          <p className='text-4xl font-bold text-white mb-4'>
+            <TypeAnimation
+                                sequence={[
+                                  'Sobre Mí',
+                                  1000,
+                                  
+                                ]}
+                                wrapper="span"
+                                speed={20}
+                                repeat={Infinity}
+                              
+                              /></p>
           <p className='text-base lg:text-lg text-justify'>
           Soy una persona tranquila, constante y activa físicamente. Me gusta entrenar en el gimnasio, jugar fútbol, hacer trekking y también disfrutar de los videojuegos en mi tiempo libre. Valoro cuando las cosas salen bien, pero si no, no me rindo: lo intento hasta que lo logro. Me gusta aprender, superarme y ver resultados, tanto en lo personal como en lo profesional. En la programación encontré una forma de combinar mi lado lógico con mi determinación, y cada proyecto es una nueva oportunidad para seguir creciendo. </p>
           <div className='flex flex-row justify-center mt-2'>
