@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { NavLink } from "./NavLink";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { MenuOverlay } from "./MenuOverlay";
 
