@@ -42,7 +42,7 @@ export const HeroSection: React.FC = () => {
 
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/in/tu-perfil"
+                href="https://www.linkedin.com/in/sebastian-schafer-272046306/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200/20 hover:bg-gray-200/30 p-3 rounded-full transition-colors"
@@ -55,7 +55,7 @@ export const HeroSection: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="https://github.com/tu-usuario"
+                href="https://github.com/Sebvstiann"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200/20 hover:bg-gray-200/30 p-3 rounded-full transition-colors"
@@ -66,7 +66,7 @@ export const HeroSection: React.FC = () => {
                 </svg>
               </a>
               <a
-                href="https://wa.me/tu-numero"
+                href="https://wa.me/+56937018683"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200/20 hover:bg-gray-200/30 p-3 rounded-full transition-colors"
