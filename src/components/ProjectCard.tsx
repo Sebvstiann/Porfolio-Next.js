@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { CodeBracketIcon, EyeIcon, XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 
 // Definimos el tipo para las props
@@ -10,7 +11,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   gitUrl: string;
-  previewUrl: string;
   images?: string[]; // Array opcional de imágenes adicionales
 }
 
@@ -19,7 +19,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   title, 
   description, 
   gitUrl, 
-  previewUrl,
   images = [] // Por defecto es un array vacío
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -107,10 +106,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
             {/* Imagen actual */}
             <div className="relative aspect-video">
-              <img 
+              <Image 
                 src={allImages[currentImageIndex]} 
                 alt={`${title} - Imagen ${currentImageIndex + 1}`}
-                className="w-full h-full object-contain rounded-lg"
+                fill
+                className="object-contain rounded-lg"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
 

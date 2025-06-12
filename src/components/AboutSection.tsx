@@ -4,8 +4,8 @@ import { useTransition, useState } from 'react';
 import Image from 'next/image';
 import { TabButton } from './TabButton';
 import { TypeAnimation } from 'react-type-animation';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaDatabase, FaFileExcel } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMysql, SiPostgresql } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaPython, FaFileExcel } from 'react-icons/fa';
+import { SiNextdotjs, SiMysql, SiPostgresql } from 'react-icons/si';
 
 interface TabData {
   title: string;

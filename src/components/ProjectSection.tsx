@@ -10,7 +10,7 @@ const projectsData=[
         description:"Para la creacion del portafolio se utilizo next.js",
         image:"/images/projects/1.png",
         gitUrl: "https://github.com/Sebvstiann/Porfolio-Next.js",
-        previewUrl:"/",
+       
         images: [
             "/images/projects/1.png",
             "/images/projects/1-2.png",
@@ -23,7 +23,7 @@ const projectsData=[
         description:"proyecto",
         image:"/images/projects/2.png",
         gitUrl:"https://github.com/Sebvstiann/CargaProgresiva-gym",
-        previewUrl:"/",
+        
         images: [
             "/images/projects/2-1.png",
             "/images/projects/2-2.png",
@@ -36,7 +36,7 @@ const projectsData=[
         description:"Para la elavoracion de este proyecto se utilizo como lenguaje de programacion Python(framework tkinder) y para la base de datos MySQL.",
         image:"/images/projects/3.png",
         gitUrl:"https://github.com/Sebvstiann/Tkinter-CRUD-",
-        previewUrl:"/",
+       
         images: [
             "/images/projects/3.png",
             "/images/projects/3-2.png",
@@ -69,7 +69,6 @@ export const ProjectSection = () => {
         description={project.description}
         imgUrl={project.image}
         gitUrl={project.gitUrl}
-        previewUrl={project.previewUrl}
         images={project.images}
         />
         )}
