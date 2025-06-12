@@ -4,6 +4,8 @@ import { useTransition, useState } from 'react';
 import Image from 'next/image';
 import { TabButton } from './TabButton';
 import { TypeAnimation } from 'react-type-animation';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaPython, FaDatabase, FaFileExcel } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiMysql, SiPostgresql } from 'react-icons/si';
 
 interface TabData {
   title: string;
@@ -16,16 +18,44 @@ const TAB_DATA: TabData[] = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul>
-        <li>• Excel</li>
-        <li>• Python(flask and django)</li>
-        <li>• MySQL</li>
-        <li>• PosgreSQL</li>
-        <li>• Html and css</li>
-        <li>• Next.js</li>
-        <li>• Soporte TI</li>
-        <li>• Instalacion de Sistemas</li>
-      </ul>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaFileExcel className="h-8 w-8 text-green-500" />
+          <span className="text-sm mt-2">Excel</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaPython className="h-8 w-8 text-blue-500" />
+          <span className="text-sm mt-2">Python</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <SiMysql className="h-8 w-8 text-blue-800" />
+          <span className="text-sm mt-2">MySQL</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <SiPostgresql className="h-8 w-8 text-blue-400" />
+          <span className="text-sm mt-2">PostgreSQL</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaHtml5 className="h-8 w-8 text-orange-500" />
+          <span className="text-sm mt-2">HTML</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaCss3Alt className="h-8 w-8 text-blue-500" />
+          <span className="text-sm mt-2">CSS</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <SiNextdotjs className="h-8 w-8 text-black dark:text-white" />
+          <span className="text-sm mt-2">Next.js</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaJs className="h-8 w-8 text-yellow-400" />
+          <span className="text-sm mt-2">JavaScript</span>
+        </div>
+        <div className="flex flex-col items-center p-3 bg-[#18191E] rounded-lg hover:bg-[#2A2D3A] transition-colors">
+          <FaGitAlt className="h-8 w-8 text-orange-600" />
+          <span className="text-sm mt-2">Git</span>
+        </div>
+      </div>
     )
   },
   {

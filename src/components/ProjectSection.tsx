@@ -22,7 +22,7 @@ const projectsData=[
         title:"2",
         description:"proyecto",
         image:"/images/projects/2.png",
-        gitUrl:"/",
+        gitUrl:"https://github.com/Sebvstiann/CargaProgresiva-gym",
         previewUrl:"/",
         images: [
             "/images/projects/2-1.png",
