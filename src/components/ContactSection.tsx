@@ -8,6 +8,8 @@ export const ContactSection = () => {
     subject: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -17,10 +19,42 @@ export const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario
-    console.log('Formulario enviado:', formData);
+    setStatus('loading');
+    setErrorMessage('');
+
+    try {
+      console.log('Enviando formulario:', formData);
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Error al enviar el mensaje');
+      }
+
+      const data = await response.json();
+      console.log('Respuesta del servidor:', data);
+
+      setStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error completo:', error);
+      setStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Error al enviar el mensaje');
+    }
   };
 
   return (
@@ -43,7 +77,7 @@ export const ContactSection = () => {
                       data-original="#000000" />
                   </svg>
                 </div>
-                <a href="mailto:tu@email.com" className="text-sm ml-4">
+                <a href="mailto:sebastiansch.dev@gmail.com" className="text-sm ml-4">
                   <small className="block text-gray-300">Email</small>
                   <span className="text-blue-400 font-medium">sebastiansch.dev@gmail.com</span>
                 </a>
@@ -92,6 +126,7 @@ export const ContactSection = () => {
             onChange={handleChange}
             placeholder='Nombre'
             className="w-full text-white bg-white/10 rounded-md py-2.5 px-4 border border-gray-300/20 text-sm outline-0 focus:border-blue-500" 
+            required
           />
           <input 
             type='email' 
@@ -100,6 +135,7 @@ export const ContactSection = () => {
             onChange={handleChange}
             placeholder='Email'
             className="w-full text-white bg-white/10 rounded-md py-2.5 px-4 border border-gray-300/20 text-sm outline-0 focus:border-blue-500" 
+            required
           />
           <input 
             type='text' 
@@ -108,6 +144,7 @@ export const ContactSection = () => {
             onChange={handleChange}
             placeholder='Asunto'
             className="w-full text-white bg-white/10 rounded-md py-2.5 px-4 border border-gray-300/20 text-sm outline-0 focus:border-blue-500" 
+            required
           />
           <textarea 
             name="message"
@@ -115,12 +152,20 @@ export const ContactSection = () => {
             onChange={handleChange}
             placeholder='Mensaje' 
             className="w-full text-white bg-white/10 rounded-md px-4 border border-gray-300/20 text-sm pt-2.5 outline-0 focus:border-blue-500 min-h-[200px]"
+            required
           ></textarea>
+          {errorMessage && (
+            <p className="text-red-500 text-sm">{errorMessage}</p>
+          )}
           <button 
             type='submit'
-            className="text-white bg-gradient-to-r from-yellow-400 to-red-700 hover:from-yellow-500 hover:to-red-800 rounded-md text-sm font-medium px-4 py-2.5 w-full cursor-pointer border-0 mt-2 transition-all duration-300 ease-out hover:scale-105 hover:rotate-1"
+            disabled={status === 'loading'}
+            className={`text-white bg-gradient-to-r from-yellow-400 to-red-700 hover:from-yellow-500 hover:to-red-800 rounded-md text-sm font-medium px-4 py-2.5 w-full cursor-pointer border-0 mt-2 transition-all duration-300 ease-out hover:scale-105 hover:rotate-1 ${status === 'loading' ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
-            Enviar mensaje
+            {status === 'loading' ? 'Enviando...' : 
+             status === 'success' ? '¡Mensaje enviado!' :
+             status === 'error' ? 'Error al enviar' :
+             'Enviar mensaje'}
           </button>
         </form>
       </div>
