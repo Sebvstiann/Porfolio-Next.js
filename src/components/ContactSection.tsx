@@ -60,38 +60,38 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 bg-white/10 backdrop-blur-md rounded-lg p-6 sm:p-8 shadow-lg">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 bg-white/10 backdrop-blur-md rounded-lg p-4 sm:p-6 lg:p-8 shadow-lg">
           {/* Columna de información de contacto */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Contactame</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">Contactame</h2>
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                 Estoy listo para aportar mis habilidades y seguir aprendiendo en nuevos desafíos. ¡No dudes en contactarme!
               </p>
             </div>
 
             {/* Email */}
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <h3 className="text-white text-lg font-semibold">Email</h3>
               <a href="mailto:sebastiansch.dev@gmail.com" 
-                 className="flex items-center space-x-4 p-3 rounded-lg hover:bg-white/5 transition-colors">
+                 className="flex items-center space-x-3 lg:space-x-4 p-3 rounded-lg hover:bg-white/5 transition-colors">
                 <div className="bg-gray-200/20 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill='#fff'
                     viewBox="0 0 479.058 479.058">
                     <path d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"/>
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <p className="text-sm text-gray-300">Email</p>
-                  <p className="text-blue-400 font-medium">sebastiansch.dev@gmail.com</p>
+                  <p className="text-blue-400 font-medium text-sm sm:text-base truncate">sebastiansch.dev@gmail.com</p>
                 </div>
               </a>
             </div>
 
             {/* Redes Sociales */}
-            <div className="space-y-4">
+            <div className="space-y-3 lg:space-y-4">
               <h3 className="text-white text-lg font-semibold">Redes Sociales</h3>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 lg:space-x-4">
                 <a href="https://www.linkedin.com/in/sebastian-schafer-272046306/" 
                    target="_blank" 
                    rel="noopener noreferrer"
@@ -125,7 +125,7 @@ export const ContactSection = () => {
 
           {/* Formulario */}
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               <input 
                 type='text' 
                 name="name"
@@ -158,7 +158,7 @@ export const ContactSection = () => {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder='Mensaje' 
-                className="w-full text-white bg-white/10 rounded-lg px-4 py-3 border border-gray-300/20 text-sm outline-0 focus:border-blue-500 min-h-[150px] resize-none transition-colors"
+                className="w-full text-white bg-white/10 rounded-lg px-4 py-3 border border-gray-300/20 text-sm outline-0 focus:border-blue-500 min-h-[120px] sm:min-h-[150px] resize-none transition-colors"
                 required
               ></textarea>
             </div>
