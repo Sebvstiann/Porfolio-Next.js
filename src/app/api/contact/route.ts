@@ -1,11 +1,13 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-if (!process.env.RESEND_API_KEY) {
-  throw new Error('RESEND_API_KEY no está configurada en las variables de entorno');
-}
+// Comentado temporalmente - Descomenta cuando tengas tu API key
+// if (!process.env.RESEND_API_KEY) {
+//   throw new Error('RESEND_API_KEY no está configurada en las variables de entorno');
+// }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Usar una API key temporal o undefined para desarrollo
+const resend = new Resend(process.env.RESEND_API_KEY || 'temp_key');
 
 export async function POST(request: Request) {
   try {
