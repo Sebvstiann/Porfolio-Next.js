@@ -38,9 +38,27 @@ const projectsData=[
         gitUrl:"https://github.com/Sebvstiann/Tkinter-CRUD-",
        
         images: [
-            "/images/projects/3.png",
+           
             "/images/projects/3-2.png",
-            "/images/projects/3-3.png"
+            "/images/projects/3-3.png",
+            "/images/projects/3-4.png",
+            "/images/projects/3-5.png",
+        ]
+    },
+    {
+        id:4,
+        title:"Landing Page",
+        description:"Para la elavoracion de este proyecto se utilizo como lenguaje de programacion Python(framework tkinder) y para la base de datos MySQL.",
+        image:"/images/projects/4.png",
+        gitUrl:"https://github.com/Sebvstiann/landingpage-gym",
+       
+        images: [
+            "/images/projects/4.png",
+            "/images/projects/4-1.png",
+            "/images/projects/4-2.png",
+            "/images/projects/4-3.png",
+            "/images/projects/4-4.png",
+
         ]
     }
 ];
