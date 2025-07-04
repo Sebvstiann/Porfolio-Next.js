@@ -10,7 +10,6 @@ const projectsData=[
         description:"Para la creacion del portafolio se utilizo next.js",
         image:"/images/projects/1.png",
         gitUrl: "https://github.com/Sebvstiann/Porfolio-Next.js",
-       
         images: [
             "/images/projects/1.png",
             "/images/projects/1-2.png",
@@ -19,8 +18,8 @@ const projectsData=[
     },
     {
         id:2,
-        title:"2",
-        description:"proyecto",
+        title:"Gestion de entrenamiento",
+        description:"Gestion de entrenamiento, se utilizo como lenguaje de programacion Python(framework django) y para la base de datos PostgreSQL, tambien se utilizo el framework bootstrap para el diseño de la pagina.",
         image:"/images/projects/2.png",
         gitUrl:"https://github.com/Sebvstiann/CargaProgresiva-gym",
         
@@ -36,9 +35,7 @@ const projectsData=[
         description:"Para la elavoracion de este proyecto se utilizo como lenguaje de programacion Python(framework tkinder) y para la base de datos MySQL.",
         image:"/images/projects/3.png",
         gitUrl:"https://github.com/Sebvstiann/Tkinter-CRUD-",
-       
         images: [
-           
             "/images/projects/3-2.png",
             "/images/projects/3-3.png",
             "/images/projects/3-4.png",
@@ -47,11 +44,10 @@ const projectsData=[
     },
     {
         id:4,
-        title:"Landing Page",
-        description:"Para la elavoracion de este proyecto se utilizo como lenguaje de programacion Python(framework tkinder) y para la base de datos MySQL.",
+        title:"Landing Page gym",
+        description:"Este proyecto es solo frontend se utilizo HTML, CSS y JavaScript.",
         image:"/images/projects/4.png",
         gitUrl:"https://github.com/Sebvstiann/landingpage-gym",
-       
         images: [
             "/images/projects/4.png",
             "/images/projects/4-1.png",
