@@ -63,7 +63,7 @@ const TAB_DATA: TabData[] = [
     id: "education",
     content: (
       <ul>
-        <li>• Instituto Profesional Inacap</li>
+        <li>• Ingenieria en Informatica - Instituto Profesional Inacap</li>
       </ul>
     )
   },
@@ -72,7 +72,14 @@ const TAB_DATA: TabData[] = [
     id: "certifications",
     content: (
       <ul>
-        <li>• Soporte y redes, Cisco</li>
+        <li>• Desarrollador Full Stack.</li>
+        <li>• Desarrollador de aplicaciones
+ basicas.</li>
+        <li>• Diseño y Gestión de base de
+ datos.</li>
+        <li>• Diseño ágil de Sistemas.</li>
+        <li>• Soporte Computacional y redes basicas.</li>
+        <li>• Arquitectura Cloud.</li>
       </ul>
     )
   }

@@ -32,7 +32,7 @@ export const HeroSection: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 items-center">
             <a
-              href="/cv_sebastian.pdf"
+              href="/cv_seba.pdf"
               download
               className="relative inline-flex w-full sm:w-fit items-center justify-center px-6 py-3 overflow-hidden font-bold text-white transition-all duration-300 ease-out rounded-full shadow-lg bg-gradient-to-br from-pink-500 via-yellow-400 to-pink-500 hover:scale-105 hover:rotate-1"
             >
